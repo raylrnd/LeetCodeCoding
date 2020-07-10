@@ -97,6 +97,23 @@ public class Backtracking {
             return;
         }
 
+        /**
+         * int cur = array[0][j];
+         * arrayList.add(cur);
+         * dfs(array, j + 1, arrayList);
+         * arrayList.remove(arrayList.size() - 1);
+         *
+         * int cur = array[1][j];
+         * arrayList.add(cur);
+         * dfs(array, j + 1, arrayList);
+         * arrayList.remove(arrayList.size() - 1);
+         *
+         * int cur = array[2][j];
+         * arrayList.add(cur);
+         * dfs(array, j + 1, arrayList);
+         * arrayList.remove(arrayList.size() - 1);
+         */
+
         for (int i = 0; i < array.length; i++) {
             int cur = array[i][j];
             System.out.println("cur : " + cur);
