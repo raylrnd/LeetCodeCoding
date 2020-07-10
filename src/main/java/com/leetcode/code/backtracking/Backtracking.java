@@ -1,3 +1,5 @@
+package com.leetcode.code.backtracking;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Scanner;
@@ -27,8 +29,10 @@ import java.util.Scanner;
  * @auther zhongshunchao
  * @date 09/07/2020 23:31
  */
-public class Main {
+public class Backtracking {
+
     private static int result = Integer.MAX_VALUE;
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int col = in.nextInt();
@@ -66,7 +70,7 @@ public class Main {
         if (j == array[0].length) {
             System.out.println("Bound");
             System.out.println(arrayList);
-            ArrayList<Integer> mycopy=new ArrayList<Integer>();
+            ArrayList<Integer> mycopy = new ArrayList<Integer>();
             mycopy=(ArrayList<Integer>) arrayList.clone();
             mycopy.sort(new Comparator<Integer>() {
                 @Override
@@ -86,8 +90,9 @@ public class Main {
                 if (midresult > result) break;
             }
             if (midresult < result) {
-                System.out.println("midresult " + midresult);
+                System.out.println("########################midresult " + midresult);
                 result = midresult;
+                System.out.println("########################resultArray" + mycopy + "," + arrayList);
             }
             return;
         }
